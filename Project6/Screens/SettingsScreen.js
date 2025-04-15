@@ -13,7 +13,7 @@ export default function SettingsScreen() {
   return (
     <SafeAreaView style={[styles.settingsContainer, {backgroundColor:theme.colors.backgroundColor}]}>
     <View style={styles.middle}>
-      <Text style={[styles.middleText, {color:theme.colors.textColor}]} >Settings</Text>
+      <Text style={[styles.middleText, {color:theme.colors.text}]} >Settings</Text>
     </View>
     <View>
     <FlatList
@@ -22,17 +22,16 @@ export default function SettingsScreen() {
       return(
         <View style={[styles.drop,{backgroundColor:theme.colors.backgroundColor}]}>
           
-          <Text style={[styles.language, {color:theme.colors.textColor}]}>{item.name}
+          <Text style={[styles.language, {color:theme.colors.text}]}>{item.name}
           </Text>
-          {React.cloneElement(item.icon(),
-            {tintColor : isDarkMode ? 'white':'black'})}
+          {item.icon()}
         </View>
         )}}
     />
     </View>
 
     <View style={styles.theme}>
-      <Text style={[styles.textTheme , {color:theme.colors.textColor}]} >Theme</Text>   
+      <Text style={[styles.textTheme , {color:theme.colors.text}]} >Theme</Text>   
 
       <Switch
         trackColor={{false: '#767577', true: '#80ed8d'}}
@@ -47,5 +46,5 @@ export default function SettingsScreen() {
   )
 }
 
-//
+
 

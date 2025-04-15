@@ -140,7 +140,9 @@ export const styles=StyleSheet.create({
           borderBottomWidth:1,
           borderBottomColor:'#dee0de',
           marginBottom:16,
-          paddingBottom:4
+          paddingBottom:4,
+          paddingRight: 15,
+          paddingVertical:15
           
          },
          theme:{
